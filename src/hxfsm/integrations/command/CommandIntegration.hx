@@ -1,7 +1,10 @@
 package hxfsm.integrations.command;
+
 import msignal.Signal;
 import mmvc.api.ICommandMap;
+import mmvc.impl.Command;
 import minject.Injector;
+
 class CommandIntegration implements IFSMIntegration
 {
     var _injector:Injector;
@@ -40,10 +43,9 @@ class CommandIntegration implements IFSMIntegration
     function gotoNewState(state:StateDef)
     {
         trace("goto: " + state.name);
-
         var signal:AnySignal = new Signal0();
         _injector.mapValue(AnySignal, signal);
-        var command:CommandState = cast _injector.instantiate(state.stateClass);
+        var command:Command = cast _injector.instantiate(state.stateClass);
         _injector.unmap(AnySignal);
         state.instance = command;
         command.execute();
