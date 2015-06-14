@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+    <meta title="HxFSM" package="hxfsm" version="1.0.0" company="Leo Bergman"/>
+    <app main="examples.callback.Main" path="export" file="HxFSM"/>
+
+    <source path="src"/>
+
+    <haxelib name="openfl"/>
+
+    <assets path="assets" exclude="openfl.svg"/>
+    <icon path="Assets/openfl.svg"/>
+</project>

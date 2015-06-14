@@ -1,0 +1,5 @@
+package hxfsm;
+
+interface IState
+{
+}
