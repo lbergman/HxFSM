@@ -4,6 +4,7 @@ Contains example OpenFL project using CallbackIntegration, but is made to be fra
 Included is a CommandIntegration for use with mmvc.
 
 Usage:
+```javascript
 // Setup FSM with CallbackIntegration
 var fsm:FSM = new FSM(new CallbackIntegration());
 var fsmController:FSMController = new FSMController(fsm);
@@ -16,3 +17,4 @@ fsm.add(InitState, [WelcomeState, ErrorState]);
 fsmController.goto(InitState);
 fsmController.goto(WelcomeState);
 trace("Current state:"+fsmController.currentStateName);
+```
