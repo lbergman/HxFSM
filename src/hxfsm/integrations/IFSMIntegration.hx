@@ -1,5 +1,5 @@
 package hxfsm.integrations;
-interface IFSMIntegration
-{
+
+interface IFSMIntegration {
     public function transition(newState:StateDef, oldState:StateDef):Void;
 }

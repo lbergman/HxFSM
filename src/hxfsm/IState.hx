@@ -1,5 +1,4 @@
 package hxfsm;
 
-interface IState
-{
+interface IState {
 }

@@ -1,0 +1,16 @@
+{
+	"name": "HxFSM",
+	"license": "MIT",
+	"tags": [
+	],
+	"classPath": "src",
+	"description": "Simple Finite State Machine",
+	"contributors": [
+		"leo.bergman"
+	],
+	"version": "0.0.2",
+	"url": "https://github.com/lbergman/hxfsm",
+	 "dependencies": {
+		 "minject":""
+	  }
+}

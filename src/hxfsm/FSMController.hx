@@ -5,23 +5,19 @@ package hxfsm;
 /* configuration. So provide access to FSMController instead to restrict usage to only the functionality needed after
 /* startup.
 */
-class FSMController
-{
+class FSMController {
     public var currentStateName(get, null):String;
     var _fsm:FSM;
 
-    public function new(fsm:FSM)
-    {
+    public function new(fsm:FSM) {
         _fsm = fsm;
     }
 
-    public function goto(state:StateClass):Bool
-    {
+    public function goto(state:StateClass):Bool {
         return _fsm.goto(state);
     }
 
-    function get_currentStateName():String
-    {
+    function get_currentStateName():String {
         return _fsm._currentStateName;
     }
 }
