@@ -1,5 +1,5 @@
 {
-	"name": "HxFSM",
+	"name": "hxfsm",
 	"license": "MIT",
 	"tags": [
 	],
@@ -8,7 +8,7 @@
 	"contributors": [
 		"leo.bergman"
 	],
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"url": "https://github.com/lbergman/hxfsm",
 	 "dependencies": {
 		 "minject":""
