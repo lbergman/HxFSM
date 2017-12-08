@@ -1,5 +1,8 @@
 package hxfsm;
-class MockInjectorState implements IState {
+
+import hxfsm.integrations.callback.ICallbackState;
+
+class MockInjectorState implements ICallbackState {
     public function enter() {
     }
     public function exit() {
