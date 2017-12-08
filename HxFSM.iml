@@ -10,17 +10,18 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" scope="PROVIDED">
       <library name="haxelib|openfl:any">
         <CLASSES>
-          <root url="file://C:/HaxeToolkit/haxe/lib/openfl/6,5,0" />
+          <root url="file://$USER_HOME$/AppData/Roaming/haxelib/openfl/6,5,1" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://C:/HaxeToolkit/haxe/lib/openfl/6,5,0" />
+          <root url="file://$USER_HOME$/AppData/Roaming/haxelib/openfl/6,5,1" />
         </SOURCES>
       </library>
     </orderEntry>
