@@ -1,2 +1,2 @@
 package hxfsm;
-typedef StateClass = Class<IState>;
+typedef StateClass = Class<StateBase>;
