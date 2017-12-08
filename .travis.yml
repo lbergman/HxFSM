@@ -5,11 +5,10 @@ language: haxe
 
 os:
   - linux
-  - osx
 
 # you can specify futher versions as found at http://haxe.org/website-content/downloads/versions.json
 haxe:
-  - "3.4.4"
+  - stable
   - development
   
 matrix:
