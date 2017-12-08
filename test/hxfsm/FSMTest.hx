@@ -12,7 +12,7 @@ class FSMTest extends BuddySuite {
                 var controller = new FSMController(fsm);
                 fsm.add(MockInjectorState, []);
                 controller.goto(MockInjectorState);
-                controller.currentStateName.should.be("hxfsm.MockInjectorState");
+                controller.currentStateName.should.be("MockInjectorState");
             });
         });
     }

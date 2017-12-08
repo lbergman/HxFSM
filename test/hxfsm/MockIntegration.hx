@@ -7,7 +7,7 @@ class MockIntegration implements IFSMIntegration {
 
     }
     public function transition(newState:StateDef, oldState:StateDef):Void {
-        var newStateInstance:ICallbackState = cast Type.createInstance(newState.stateClass, []);
+        var newStateInstance:ICallbackState = new MockInjectorState();
         newState.instance = newStateInstance;
         if (oldState != null) {
             var oldStateInstance:ICallbackState = cast oldState.instance;

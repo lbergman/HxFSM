@@ -29,7 +29,7 @@ class StateDef {
 
     public function get_name():String {
         if (_name == null) {
-            _name = Type.getClassName(stateClass);
+            _name = Reflect.field(stateClass, "BASE_NAME");
         }
         return _name;
     }

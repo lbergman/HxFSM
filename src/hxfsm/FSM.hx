@@ -23,7 +23,8 @@ class FSM {
 
     @:allow(hxfsm.FSMController)
     function goto(stateClass:StateClass):Bool {
-        var stateName:String = Type.getClassName(stateClass);
+        var stateName:String = Reflect.field(stateClass, 'BASE_NAME');
+        trace("stateName:" + stateName);
         var newState:StateDef = _states.get(stateName);
         var oldState:StateDef = _currentState;
         if (newState == null) {
