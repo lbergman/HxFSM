@@ -24,7 +24,6 @@ class FSM {
     @:allow(hxfsm.FSMController)
     function goto(stateClass:StateClass):Bool {
         var stateName:String = Reflect.field(stateClass, 'BASE_NAME');
-        trace("stateName:" + stateName);
         var newState:StateDef = _states.get(stateName);
         var oldState:StateDef = _currentState;
         if (newState == null) {
@@ -38,7 +37,7 @@ class FSM {
             return true;
         } else {
             var currentStateName:String = _currentState.name;
-            trace('No transition defined from $currentStateName to $stateName');
+            trace('warn', 'No transition defined from $currentStateName to $stateName');
         }
         return false;
     }

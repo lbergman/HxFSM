@@ -9,7 +9,7 @@ class Macros {
         var classType:ClassType = Context.getLocalClass().get();
 
         var name = Context.makeExpr(classType.name, pos);
-        trace("name:" + name);
+
         var c = macro : {
             public static var BASE_NAME:String = $name;
         };
