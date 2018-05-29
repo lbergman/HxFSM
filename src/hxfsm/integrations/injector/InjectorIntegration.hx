@@ -1,6 +1,6 @@
 package hxfsm.integrations.injector;
 
-import minject.Injector;
+import hex.di.Injector;
 
 class InjectorIntegration implements IFSMIntegration {
     var _injector:Injector;
@@ -10,8 +10,10 @@ class InjectorIntegration implements IFSMIntegration {
     }
 
     public function transition(newState:StateDef, oldState:StateDef):Void {
-        var newStateInstance:IInjectorState = cast Type.createInstance(newState.stateClass, []);
-        _injector.injectInto(newStateInstance);
+        var newStateInstance:IInjectorState = cast _injector.instantiateUnmapped(newState.stateClass);
+        trace("_injector.hasMapping(FSMController):" + _injector.hasMapping(FSMController));
+        //_injector.injectInto(newStateInstance);
+        trace("newStateInstance:", newStateInstance);
         newState.instance = newStateInstance;
         if (oldState != null) {
             var oldStateInstance:IInjectorState = cast oldState.instance;
