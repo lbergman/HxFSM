@@ -14,6 +14,5 @@
   "releasenote": "https://github.com/lbergman/HxFSM/blob/master/CHANGELOG.md",
   "url": "https://github.com/lbergman/hxfsm",
   "dependencies": {
-    "minject": ""
   }
 }

@@ -1,2 +1,5 @@
 .idea
 *.iml
+.haxelib
+.history
+bin
