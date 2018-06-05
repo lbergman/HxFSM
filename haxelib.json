@@ -10,7 +10,7 @@
   "contributors": [
     "leo.bergman"
   ],
-  "version": "1.0.2",
+  "version": "1.0.3",
   "releasenote": "https://github.com/lbergman/HxFSM/blob/master/CHANGELOG.md",
   "url": "https://github.com/lbergman/hxfsm",
   "dependencies": {
