@@ -1,5 +1,8 @@
 package hxfsm.integrations.injector;
 
-class InjectorStateBase extends StateBase implements hex.di.IInjectorContainer {
-
+class InjectorStateBase extends StateBase implements IInjectorState {
+    public function enter(){
+    }
+    public function exit() {
+    }
 }

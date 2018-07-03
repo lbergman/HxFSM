@@ -1,6 +1,7 @@
 package hxfsm;
 
 import buddy.BuddySuite;
+import hxfsm.integrations.callback.CallbackIntegration;
 
 using buddy.Should;
 
@@ -46,6 +47,16 @@ class FSMTest extends BuddySuite {
                 controller.goto(MockInjectorStateB);
                 MockInjectorStateB.entered.should.be(true);
                 MockInjectorState.entered.should.be(false);
+            });
+            it("should call enter on states when using callback integration", {
+                var fsm = new FSM(new CallbackIntegration());
+                var controller = new FSMController(fsm);
+                fsm.add(MockCallbackState, [MockCallbackStateB]);
+                fsm.add(MockCallbackStateB, []);
+                controller.goto(MockCallbackState);
+                controller.goto(MockCallbackStateB);
+                MockCallbackState.entered.should.be(true);
+                MockCallbackStateB.entered.should.be(false);
             });
         });
     }

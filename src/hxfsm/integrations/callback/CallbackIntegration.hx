@@ -3,9 +3,8 @@ class CallbackIntegration implements IFSMIntegration {
     public function new() {
     }
 
-    public function transition(newState:StateDef, oldState:StateDef, enterFunc:ICallbackState -> Void) {
+    public function transition(newState:StateDef, oldState:StateDef) {
         var newStateInstance:ICallbackState = cast Type.createInstance(newState.stateClass, []);
-        enterFunc(newStateInstance);
         newState.instance = newStateInstance;
         if (oldState != null) {
             var oldStateInstance:ICallbackState = cast oldState.instance;
