@@ -42,8 +42,7 @@ class FSM {
 	}
 
 	function transition(newState:StateDef, oldState:StateDef) {
-		_currentState = newState;
-		_integration.transition(newState, oldState);
+		_integration.transition(newState, oldState,(state) -> _currentState = state);
 	}
 
 	/**
