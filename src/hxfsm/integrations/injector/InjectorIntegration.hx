@@ -15,6 +15,7 @@ class InjectorIntegration implements IFSMIntegration {
 		if (oldState != null) {
 			var oldStateInstance:IInjectorState = cast oldState.instance;
 			oldStateInstance.exit();
+			_injector.destroyInstance(oldStateInstance);
 		}
 		update(newState);
 		newStateInstance.enter();
