@@ -18,6 +18,8 @@ class InjectorIntegration implements IFSMIntegration {
 			_injector.destroyInstance(oldStateInstance);
 		}
 		update(newState);
-		newStateInstance.enter();
+		haxe.Timer.delay(() -> {
+			newStateInstance.enter();
+		}, 0);
 	}
 }
