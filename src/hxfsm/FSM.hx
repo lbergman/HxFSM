@@ -33,6 +33,7 @@ class FSM {
 			return true;
 		} else if (oldState.transitions.indexOf(stateClass) != -1) {
 			transition(newState, oldState);
+			oldState.instance = null;
 			return true;
 		} else {
 			var currentStateName:String = _currentState.name;
