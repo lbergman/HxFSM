@@ -1,7 +1,7 @@
 package hxfsm;
 
-import hxfsm.integrations.callback.ICallbackState;
 import hxfsm.integrations.IFSMIntegration;
+import hxfsm.integrations.callback.ICallbackState;
 
 class FSM {
 	@:allow(hxfsm.FSMController)
@@ -43,7 +43,7 @@ class FSM {
 	}
 
 	function transition(newState:StateDef, oldState:StateDef) {
-		_integration.transition(newState, oldState,(state) -> _currentState = state);
+		_integration.transition(newState, oldState, state -> _currentState = state);
 	}
 
 	/**
